@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%!
+public int multiply(int a, int b) {
+	int c = a * b;
+	return c;
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +14,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%-- JSP 주석입니다. --%>
-	주석은 출력 결과에 포함되지 않습니다.
+
+10 * 25 = <%= multiply(10, 25) %>
+
 </body>
 </html>
+
+
+

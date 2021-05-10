@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%!
+// declaration
+%>
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +13,29 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%-- JSP 주석입니다. --%>
-	주석은 출력 결과에 포함되지 않습니다.
+<p>scriptlet</p>
+<%
+// scriptlet
+%>
+
+<p>declaration선언부</p>
+<%!
+// declaration2
+%>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

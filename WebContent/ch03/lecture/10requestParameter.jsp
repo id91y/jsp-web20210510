@@ -7,7 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%-- JSP 주석입니다. --%>
-	주석은 출력 결과에 포함되지 않습니다.
+<p>request parameter</p>
+<%= request.getParameter("name") %> <br>
+<%= request.getParameter("age") %>
 </body>
 </html>
+
+
+
+
+
+
+

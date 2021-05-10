@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%!
+private int add(int a, int b) {
+	return a + b;
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +13,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%-- JSP 주석입니다. --%>
-	주석은 출력 결과에 포함되지 않습니다.
+
+<%= add(9, 8) %>
+
 </body>
 </html>
+
+
+
+
+
+
+
