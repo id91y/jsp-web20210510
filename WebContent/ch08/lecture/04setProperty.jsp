@@ -1,13 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
-<%@ page import="java.net.*" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
 
-<%
-Cookie cookie = new Cookie("name", URLEncoder.encode("최범균", "utf-8"));
-response.addCookie(cookie);
-%>
+<jsp:useBean id="book" class="ch08.Book">
+	<jsp:setProperty name="book" property="title" value="JAVA" />
+</jsp:useBean>
+
 
 <!DOCTYPE html>
 <html>
@@ -19,15 +18,7 @@ response.addCookie(cookie);
 </head>
 <body>
 <div class="container">
-
-<%= cookie.getName() %> 쿠키의 값 = "<%= cookie.getValue() %>"
 	
 </div>
 </body>
 </html>
-
-
-
-
-
-

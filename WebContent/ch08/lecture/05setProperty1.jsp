@@ -1,13 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
-<%@ page import="java.net.*" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
-
-<%
-Cookie cookie = new Cookie("name", URLEncoder.encode("최범균", "utf-8"));
-response.addCookie(cookie);
-%>
 
 <!DOCTYPE html>
 <html>
@@ -19,9 +13,12 @@ response.addCookie(cookie);
 </head>
 <body>
 <div class="container">
-
-<%= cookie.getName() %> 쿠키의 값 = "<%= cookie.getValue() %>"
-	
+	<form action="05setProperty2.jsp" method="post">
+		제목 : <input type="text" name="title" /> <br>
+		저자 : <input type="text" name="name" /> <br>
+		가격 : <input type="text" name="price" /> <br>
+		<input type="submit" value="등록" />
+	</form>
 </div>
 </body>
 </html>

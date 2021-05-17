@@ -1,14 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
-<%@ page import="java.net.*" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
 
-<%
-Cookie cookie = new Cookie("name", URLEncoder.encode("최범균", "utf-8"));
-response.addCookie(cookie);
-%>
-
+<jsp:useBean id="member" scope="request" class="ch08.MemberInfo"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,12 +14,21 @@ response.addCookie(cookie);
 </head>
 <body>
 <div class="container">
-
-<%= cookie.getName() %> 쿠키의 값 = "<%= cookie.getValue() %>"
+	<%= member.getName() %> (<%= member.getId() %>) 회원님
+	안녕하세요.	
+	
+	<br>
+	
+	<jsp:getProperty property="name" name="member"/>
+	(<jsp:getProperty property="id" name="member"/>) 회원님
+	안녕하세요.
 	
 </div>
 </body>
 </html>
+
+
+
 
 
 

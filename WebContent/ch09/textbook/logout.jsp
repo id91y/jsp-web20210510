@@ -1,12 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
-<%@ page import="java.net.*" %>
+<%@ page import="util.*" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
 
 <%
-Cookie cookie = new Cookie("name", URLEncoder.encode("최범균", "utf-8"));
-response.addCookie(cookie);
+	response.addCookie(Cookies.createCookie("AUTH", "", "/", 0));
 %>
 
 <!DOCTYPE html>
@@ -19,15 +18,8 @@ response.addCookie(cookie);
 </head>
 <body>
 <div class="container">
-
-<%= cookie.getName() %> 쿠키의 값 = "<%= cookie.getValue() %>"
-	
+	로그아웃하였습니다.	
 </div>
 </body>
 </html>
-
-
-
-
-
 

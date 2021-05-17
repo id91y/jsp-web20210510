@@ -1,13 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
-<%@ page import="java.net.*" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
-
-<%
-Cookie cookie = new Cookie("name", URLEncoder.encode("최범균", "utf-8"));
-response.addCookie(cookie);
-%>
 
 <!DOCTYPE html>
 <html>
@@ -19,13 +13,14 @@ response.addCookie(cookie);
 </head>
 <body>
 <div class="container">
-
-<%= cookie.getName() %> 쿠키의 값 = "<%= cookie.getValue() %>"
-	
+	<form action="<%= request.getContextPath() %>/ch09/textbook/login.jsp" method="post">
+		아이디 <input type="text" name="id" size="10">
+		암호 <input type="password" name="password" size="10" >
+		<input type="submit" value="로그인">
+	</form>
 </div>
 </body>
 </html>
-
 
 
 
