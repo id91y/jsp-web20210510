@@ -1,4 +1,4 @@
-package sample2.controller;
+package sample2.controller.member;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -26,7 +26,7 @@ public class Sample2MainServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String path = "/WEB-INF/sample2/main.jsp";
+		String path = "/WEB-INF/sample2/member/main.jsp";
 		request.getRequestDispatcher(path).forward(request, response);
 	}
 
